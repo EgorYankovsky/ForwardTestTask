@@ -1,4 +1,4 @@
-#include "FileStreamer/FileStreamer.h"
+#include "FileStreamer.h"
 
 std::vector<std::string> FileStreamer::Read(std::string pathToFile) {
     std::ifstream file(pathToFile, std::ios::in | std::ios::binary | std::ios::ate);
