@@ -6,7 +6,7 @@ double InternalCombustionEngine::getTorqueAt(double rotateSpeed) {
         if (values.back().second < rotateSpeed) return values.back().first;
 
         if (values[i].second <= rotateSpeed and rotateSpeed <= values[i + 1].second)
-            return (values[i + 1].second - values[i].second) / (values[i + 1].first - values[i + 1].first) * (rotateSpeed - values[i].first) + values[i].second;
+            return (values[i + 1].first - values[i].first) / (values[i + 1].second - values[i].second) * (rotateSpeed - values[i].second) + values[i].first;
     }
     return 0.0;
 }
@@ -33,14 +33,24 @@ InternalCombustionEngine::InternalCombustionEngine(std::vector<std::string> &val
     std::vector<double> V(arrLength);
     auto iter = values.begin() + 4;
     for (size_t i(0); i < arrLength; ++i) {
-        M[i] = std::stod(*iter);
-        V[i] = std::stod(*(iter + arrLength));
+        //M[i] = std::stod(*iter);
+        //V[i] = std::stod(*(iter + arrLength));
+        this->values.emplace_back(std::stod(*iter), std::stod(*(iter + arrLength)));
         ++iter;
     }
     H_m = std::stod(*(values.rbegin() + 1));
     H_v = std::stod(*(values.rbegin()));
 }
 
-void InternalCombustionEngine::UpdateStage(double dT) {
-    double a = getTorqueAt();
+void InternalCombustionEngine::UpdateStage(double dT, double outsideTemp) {
+    timeStage += dT;
+
+    double a = getTorqueAt(currentRotateSpeed) / I;
+
+    currentRotateSpeed += a * dT;
+
+    double engineHeatSpeed = getTorqueAt(currentRotateSpeed) * H_m + currentRotateSpeed * currentRotateSpeed * H_v;
+    double engineCoolSpeed = C * (GetTemperature() - outsideTemp);
+
+    currentTemperature += (engineHeatSpeed - engineCoolSpeed) * dT;
 }

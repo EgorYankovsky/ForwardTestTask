@@ -13,5 +13,5 @@ public:
     InternalCombustionEngine(std::vector<std::string> &values);
     ~InternalCombustionEngine() {};
 
-    void UpdateStage(double dT) override;
+    void UpdateStage(double dT, double outsideTemp) override;
 };

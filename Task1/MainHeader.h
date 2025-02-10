@@ -7,7 +7,7 @@
 const std::string configurationFile = "config.txt";
 
 // Input data.
-extern double T_outside;
-extern double T_0;
-extern double T_n;
-extern size_t T_amount;
+extern double T_outside = NAN;
+extern double T_0 = NAN;
+extern double T_n = NAN;
+extern size_t T_amount = NAN;
