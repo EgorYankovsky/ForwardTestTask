@@ -22,7 +22,7 @@ public:
         GeneralTest(eng, time, timeLayersAmount, outsideTemperature, testAccuracy) {};
     ~OverheatTest() {};
 
-    inline bool IsOverheated() const { return abs(_eng->GetOverheatTemperature() - _eng->GetTemperature()) <= _testAccuracy; }
+    inline bool IsOverheated() const { return _eng->GetOverheatTemperature() - _eng->GetTemperature() <= _testAccuracy; }
 
     void Run() override;
     void WriteResult() override;

@@ -23,7 +23,13 @@ public:
     inline virtual bool isSpinning() const { return _isSpinning; }
     inline bool isCommitedForTesting() const { return _isCommited; }
 
-    inline virtual void PrepareForTesting(double outsideTemperature) { _currentTemperature = outsideTemperature; _currentRotateSpeed = 0.0; }
+    inline virtual void PrepareForTesting(double outsideTemperature) { 
+        _currentTemperature = outsideTemperature; 
+        _currentRotateSpeed = 0.0; 
+        _currentPower = 0.0;
+        _currentTimeStage = 0.0;
+    }
+
     virtual void UpdateStage(double dT, double outsideTemp) = 0;
 protected:
     bool _isCommited;

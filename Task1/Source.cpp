@@ -9,7 +9,7 @@ size_t globalsInput::g_timeLayersAmount = 0;
 
 int main() {
     auto values = FileStreamer::Read(CONFIGURATION_FILE);
-    GeneralEngine* engine = new InternalCombustionEngine(values, 1e-5);
+    GeneralEngine* engine = new InternalCombustionEngine(values, 1e-1);
 
     std::cout << "Enter outside temperature value (Celsius, float): ";
     std::cin >> g_outsideTemperature;
