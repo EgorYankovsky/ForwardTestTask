@@ -62,8 +62,7 @@
               "RelativeToolTip": "Task1\\Test\\PowerTest.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-11T09:39:11.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T09:39:11.623Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "Task1\\config.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-02-11T09:24:59.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T09:24:59.261Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "Task1\\Test\\OverheatTest.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-11T09:11:57.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T09:11:57.628Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "RelativeToolTip": "Task1\\Test\\PowerTest.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-11T09:11:33.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T09:11:33.133Z"
             },
             {
               "$type": "Document",
@@ -114,8 +110,7 @@
               "RelativeToolTip": "Task1\\Test\\OverheatTest.h",
               "ViewState": "AgIAAA8AAAAAAAAAAAAywCAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-11T09:06:31.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T09:06:31.833Z"
             },
             {
               "$type": "Document",
@@ -127,8 +122,7 @@
               "RelativeToolTip": "Task1\\Test\\GeneralTest.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-11T09:00:26.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T09:00:26.947Z"
             },
             {
               "$type": "Document",
@@ -140,8 +134,7 @@
               "RelativeToolTip": "Task1\\Engine\\InternalCombustionEngine.h",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-11T08:53:59.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T08:53:59.645Z"
             },
             {
               "$type": "Document",
@@ -153,8 +146,7 @@
               "RelativeToolTip": "Task1\\Engine\\GeneralEngine.h",
               "ViewState": "AgIAABMAAAAAAAAAAIAwwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-11T08:52:23.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T08:52:23.094Z"
             },
             {
               "$type": "Document",
@@ -179,8 +171,7 @@
               "RelativeToolTip": "Task1\\IOStreamer\\FileStreamer.h",
               "ViewState": "AgIAAAYAAAAAAAAAAAAxwBEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-11T08:46:23.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T08:46:23.852Z"
             }
           ]
         }
