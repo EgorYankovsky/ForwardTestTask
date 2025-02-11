@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\IOStreamer">
+      <UniqueIdentifier>{b929d942-d683-4191-9add-5aad147f37c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Engine">
+      <UniqueIdentifier>{2a2978e3-b302-41f5-840c-e1a6922b3e16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Test">
+      <UniqueIdentifier>{1d2ca9e3-e0a2-4b2a-832a-b2bde32bc9c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\IOStreamer">
+      <UniqueIdentifier>{9711d427-28e3-4e53-bb0b-3c4fdbc79bf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Engine">
+      <UniqueIdentifier>{d9d6da43-9351-4d1e-be64-e195047cdac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Test">
+      <UniqueIdentifier>{72333894-eb09-490e-a759-1fe00a53ad3f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="IOStreamer\FileStreamer.cpp">
+      <Filter>Исходные файлы\IOStreamer</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\InternalCombustionEngine.cpp">
+      <Filter>Исходные файлы\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\OverheatTest.cpp">
+      <Filter>Исходные файлы\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\PowerTest.cpp">
+      <Filter>Исходные файлы\Test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="config.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainHeader.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="IOStreamer\FileStreamer.h">
+      <Filter>Файлы заголовков\IOStreamer</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GeneralEngine.h">
+      <Filter>Файлы заголовков\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\InternalCombustionEngine.h">
+      <Filter>Файлы заголовков\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\GeneralTest.h">
+      <Filter>Файлы заголовков\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\OverheatTest.h">
+      <Filter>Файлы заголовков\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\PowerTest.h">
+      <Filter>Файлы заголовков\Test</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
