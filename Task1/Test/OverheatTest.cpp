@@ -1,10 +1,5 @@
 #include "OverheatTest.h"
 
-bool OverheatTest::IsOverheated() { 
-    //std::cout << abs(_eng->GetOverheatTemperature() - _eng->GetTemperature()) << std::endl;
-    return abs(_eng->GetOverheatTemperature() - _eng->GetTemperature()) <= _testAccuracy;
-}
-
 void OverheatTest::Run() {
     if (!_isPreparedForRunning or !_eng->isCommitedForTesting()) return;
 

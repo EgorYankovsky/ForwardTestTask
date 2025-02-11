@@ -36,8 +36,8 @@ void InternalCombustionEngine::UpdateStage(double dT, double outsideTemperature)
 
     a = getTorqueAt(_currentRotateSpeed) / _I;
 
-    //if (a >= 1e-7) _isSpinning = true;
-    //else _isSpinning = false;
+    if (a >= 1e-7) _isSpinning = true;
+    else _isSpinning = false;
 
     _currentRotateSpeed += a * dT;
 

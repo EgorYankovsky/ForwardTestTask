@@ -3,6 +3,10 @@
 #include <iostream>
 #include "../Engine/GeneralEngine.h"
 
+/**
+* @brief Abstract class of test.
+* Parent class for every test.
+*/
 class GeneralTest {
 public:
     GeneralTest() : _eng(nullptr), _time(0.0), _timeLayersAmount(0), _isPreparedForRunning(false), _outsideTemperature(20.0), 
@@ -12,8 +16,14 @@ public:
         _isPreparedForRunning(true), _testAccuracy(testAccuracy) {};
     ~GeneralTest() {};
     
+    /**
+     * @brief Method that start test.
+    */
     virtual void Run() = 0;
-    
+
+    /**
+     * @brief Method that makes console output of test result.
+    */
     virtual void WriteResult() = 0;
 protected:
     bool _isPreparedForRunning;

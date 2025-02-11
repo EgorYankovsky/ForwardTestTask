@@ -3,6 +3,10 @@
 #include <vector>
 #include <algorithm>
 
+/**
+* @brief Abstract class of engine.
+* Parent class for every engine.
+*/
 class GeneralEngine {
 public:
     GeneralEngine(double rotationAccuracy) : _rotationAccuracy(rotationAccuracy), _isCommited(false), 
