@@ -1,9 +1,11 @@
 #pragma once
 
-#include "FileStreamer.h"
-#include "InternalCombustionEngine.h"
-#include "OverheatTest.h"
-#include "PowerTest.h"
+#include <stdexcept>
+
+#include "IOStreamer/FileStreamer.h"
+#include "Engine/InternalCombustionEngine.h"
+#include "Test/OverheatTest.h"
+#include "Test/PowerTest.h"
 
 // Input data.
 namespace globalsInput {
