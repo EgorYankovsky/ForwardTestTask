@@ -3,11 +3,11 @@
 #include "FileStreamer.h"
 #include "InternalCombustionEngine.h"
 #include "OverheatTest.h"
-
-const std::string configurationFile = "config.txt";
+#include "PowerTest.h"
 
 // Input data.
-extern double T_outside = NAN;
-extern double T_0 = NAN;
-extern double T_n = NAN;
-extern size_t T_amount = NAN;
+namespace globalsInput {
+    extern double g_outsideTemperature;
+    extern double g_experimentTime;
+    extern size_t g_timeLayersAmount;
+}

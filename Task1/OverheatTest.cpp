@@ -1,13 +1,24 @@
 #include "OverheatTest.h"
 
 void OverheatTest::Run() {
-    if (!isPreparedForRunning) {
+    if (!_isPreparedForRunning) {
         exit(-1);
     }
-    double deltTime = (tn - t0) / ta;
-    eng->SetBeginningParameters(t0, outdoorTemperature, 0.0);
-    while (eng->GetCurrentTime() < tn and !eng->isOverheated()) {
-        eng->UpdateStage(deltTime, outdoorTemperature);
-    }
-    std::cout << eng->GetTemperature() << " " << eng->GetCurrentTime() << std::endl;
+    double deltTime = _time / _timeLayersAmount;
+    
+    _eng->PrepareForTesting(_outsideTemperature);
+    do {
+        _eng->UpdateStage(deltTime, _outsideTemperature);
+    } while (_eng->GetTimeStage() < _time and !_eng->isOverheated());
+
+    _temperature = _eng->GetTemperature();
+    _timeElapsed = _eng->GetTimeStage();
+
+    std::cout << _eng->GetTemperature() << " " << _eng->GetTimeStage() << std::endl;
+
+}
+
+void OverheatTest::GetResults() {
+    _temperature = _eng->GetTemperature();
+    _timeElapsed = _eng->GetTimeStage();
 }

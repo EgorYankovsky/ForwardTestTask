@@ -4,29 +4,31 @@
 #include <algorithm>
 
 class GeneralEngine {
-protected:
-    bool isCommited = false;
-    double I = 0.0;
-    double T_overheat = 0.0;
-    double H_m = 0.0;
-    double H_v = 0.0;
-    double C = 0.0;
-    double timeStage = 0.0;
-    double currentTemperature = 0.0;
-    double currentRotateSpeed = 0.0;
-    std::vector<std::pair<double, double>> values{};
 public:
-    GeneralEngine() {};
+    GeneralEngine() : _isCommited(false), _currentTimeStage(0.0), _currentPower(0.0),
+                      _currentTemperature(0.0), _overheatTemperature(0.0), _isSpinning(false), _currentRotateSpeed(0.0) {};
     ~GeneralEngine() {};
-    inline double GetTemperature() const { return currentTemperature; }
-    inline double GetCurrentTime() const { return timeStage; }
-    inline double GetCurrentSpeed() const { return currentRotateSpeed; }
-    inline double isOverheated() const { return currentTemperature >= T_overheat; }
-    void SetBeginningParameters(double time0, double temperature0, double rotateSpeed) { 
-        timeStage = time0; 
-        currentTemperature = temperature0; 
-        currentRotateSpeed = rotateSpeed;
-    }
+    
+    inline double GetTemperature() const { return _currentTemperature; }
+    inline double GetTimeStage() const { return _currentTimeStage; }
+    inline double GetPower() const { return _currentPower; }
+    inline double GetRotateSpeed() const { return _currentRotateSpeed; }
+    
+    inline bool isOverheated() const { return _currentTemperature >= _overheatTemperature; }
+    inline bool isSpinning() const { return _isSpinning; }
+    inline bool isCommitedForTesting() const { return _isCommited; }
+
+    inline virtual void PrepareForTesting(double outsideTemperature) { _currentTemperature = outsideTemperature; _currentRotateSpeed = 0.0; }
+
     virtual void UpdateStage(double dT, double outsideTemp) = 0;
+
+protected:
+    bool _isCommited;
+    bool _isSpinning;
+    double _currentTimeStage;
+    double _currentPower;
+    double _currentTemperature;
+    double _overheatTemperature;
+    double _currentRotateSpeed;
 };
 
