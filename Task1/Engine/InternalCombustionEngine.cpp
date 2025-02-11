@@ -13,7 +13,7 @@ double InternalCombustionEngine::getTorqueAt(double rotateSpeed) {
     return 0.0;
 }
 
-InternalCombustionEngine::InternalCombustionEngine(std::vector<std::string> &values) {
+InternalCombustionEngine::InternalCombustionEngine(std::vector<std::string> &values, double rotationAccuracy) : GeneralEngine(rotationAccuracy) {
     _I = std::stod(*values.begin());
     _overheatTemperature = std::stod(*(values.begin() + 1));
     _C = std::stod(*(values.begin() + 2));
@@ -27,15 +27,17 @@ InternalCombustionEngine::InternalCombustionEngine(std::vector<std::string> &val
     }
     _H_m = std::stod(*(values.rbegin() + 1));
     _H_v = std::stod(*(values.rbegin()));
+    _isCommited = true;
+    a = 0.0;
 }
 
 void InternalCombustionEngine::UpdateStage(double dT, double outsideTemperature) {
     _currentTimeStage += dT;
 
-    double a = getTorqueAt(_currentRotateSpeed) / _I;
+    a = getTorqueAt(_currentRotateSpeed) / _I;
 
-    if (a >= 1e-7) _isSpinning = true;
-    else _isSpinning = false;
+    //if (a >= 1e-7) _isSpinning = true;
+    //else _isSpinning = false;
 
     _currentRotateSpeed += a * dT;
 

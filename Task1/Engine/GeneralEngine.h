@@ -5,23 +5,22 @@
 
 class GeneralEngine {
 public:
-    GeneralEngine() : _isCommited(false), _currentTimeStage(0.0), _currentPower(0.0),
-                      _currentTemperature(0.0), _overheatTemperature(0.0), _isSpinning(false), _currentRotateSpeed(0.0) {};
+    GeneralEngine(double rotationAccuracy) : _rotationAccuracy(rotationAccuracy), _isCommited(false), 
+        _currentTimeStage(0.0), _currentPower(0.0), _currentTemperature(0.0), _overheatTemperature(0.0), 
+        _isSpinning(false), _currentRotateSpeed(0.0) {};
     ~GeneralEngine() {};
     
     inline double GetTemperature() const { return _currentTemperature; }
     inline double GetTimeStage() const { return _currentTimeStage; }
     inline double GetPower() const { return _currentPower; }
     inline double GetRotateSpeed() const { return _currentRotateSpeed; }
+    inline double GetOverheatTemperature() const { return _overheatTemperature; }
     
-    inline bool isOverheated() const { return _currentTemperature >= _overheatTemperature; }
-    inline bool isSpinning() const { return _isSpinning; }
+    inline virtual bool isSpinning() const { return _isSpinning; }
     inline bool isCommitedForTesting() const { return _isCommited; }
 
     inline virtual void PrepareForTesting(double outsideTemperature) { _currentTemperature = outsideTemperature; _currentRotateSpeed = 0.0; }
-
     virtual void UpdateStage(double dT, double outsideTemp) = 0;
-
 protected:
     bool _isCommited;
     bool _isSpinning;
@@ -30,5 +29,6 @@ protected:
     double _currentTemperature;
     double _overheatTemperature;
     double _currentRotateSpeed;
+    double _rotationAccuracy;
 };
 

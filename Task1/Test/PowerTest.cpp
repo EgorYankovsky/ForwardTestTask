@@ -10,15 +10,14 @@ void PowerTest::Run() {
 
     do {
         _eng->UpdateStage(deltTime, _outsideTemperature);
+        if (_power < _eng->GetPower()){
+            _power = _eng->GetPower();
+            _rotationSpeed = _eng->GetRotateSpeed();
+        }
     } while (_eng->GetTimeStage() < _time and _eng->isSpinning());
-    
-    _power = _eng->GetPower();
-    _rotationSpeed = _eng->GetRotateSpeed();
-
-    std::cout << _eng->GetPower() << " " << _eng->GetRotateSpeed() << std::endl;
 }
 
-void PowerTest::GetResults() {
-    _power = _eng->GetPower();
-    _rotationSpeed = _eng->GetRotateSpeed();
+void PowerTest::WriteResult() {
+    std::cout << "\x1B[32mPower test result:\033[0m\t\t" << std::endl;
+    std::cout << "The maximum power " << _power << " (kW) was reached at a speed of " << _rotationSpeed << " (rad / sec)." << std::endl;
 }
